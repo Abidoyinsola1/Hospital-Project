@@ -1,0 +1,16 @@
+header {
+    background-image: url("./img/hospital-banner.png");
+    height: 94vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 70% 60%
+}
+
+.header {
+    text-align: center;
+    padding-top: 20%;
+}
+
+.header h1, .header p {
+    color: white;
+}
