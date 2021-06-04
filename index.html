@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,41 +11,119 @@
       crossorigin="anonymous"
     />
     <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
-    crossorigin="anonymous"
-  />
-    <link rel="stylesheet" href="assets/style.css">
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Quick Recovery Hospital</title>
-</head>
-<body>
-<!-- Navbar -->
+  </head>
+  <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><i class="fa fa-cross"></i><b> QR</b></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" id="calcBill" href="#">Get Your Bill</a>
-              <a class="nav-link" href="#">Sign In</a>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="fa fa-cross"></i><b> QR</b></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" id="home" aria-current="page" href="#"
+              >Home</a
+            >
+            <a class="nav-link" id="calcBill" href="#">Get Your Bill</a>
+            <a class="nav-link" id="profile" href="#">Sign In</a>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <header>
-          <div class="header"><h1>    QUICK RECOVERY HOSPITAL</h1>
-        <p>...for your quick recovery</p></div>
-
+    <header id="header">
+      <div class="header">
+        <h1>QUICK RECOVERY HOSPITAL</h1>
+        <p>...for your quick recovery</p>
+      </div>
     </header>
 
-      <!-- <section class="banner">
-      </section> -->
-    
+    <section class="details">
+      <div class="">
+        <input
+          type="number"
+          id="daysOnAdmisson"
+          class="form-control"
+          min="1"
+          placeholder="How many days did  you spend on admission?"
+        />
+        <br />
+        <input
+          type="number"
+          class="form-control"
+          id="medicationCharges"
+          placeholder="How much did  you spend on medication?"
+        />
+        <br />
+        <input
+          type="number"
+          class="form-control"
+          id="surgeryCharges"
+          placeholder="How much did  you spend on surgery?"
+        />
+        <br />
+        <input
+          type="number"
+          class="form-control"
+          id="labCharges"
+          placeholder="How much did  you spend on diagnostic lab test?"
+        />
+        <br />
+        <input
+          type="number"
+          class="form-control"
+          id="mealCharges"
+          min="1"
+          placeholder="How many meals did you buy?"
+        />
+      </div>
+      <input
+        type="submit"
+        id="submit-button"
+        class="form-control btn btn-dark"
+        value="Submit"
+      />
+
+      <div class="result">
+        <table class="table table-bordered table-hover">
+          <tr>
+            <td>Miscellaneous Charges</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Meal Charges</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Admission Charges</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Total Charges</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
     <script src="assets/app.js"></script>
-</body>
+  </body>
 </html>

@@ -14,3 +14,19 @@ header {
 .header h1, .header p {
     color: white;
 }
+
+h1 {
+    font-size: 70px;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+input {
+    padding: 1em 5em;
+}
+
+::placeholder {
+    text-align: center;
+}
