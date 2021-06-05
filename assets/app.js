@@ -1,4 +1,5 @@
 document.querySelector(".details").style.display = "none"
+document.querySelector(".result").style.display = "none"
 
 document.getElementById("profile").addEventListener('click', function () {
     const userName = prompt("Welcome, what's your name?")
@@ -17,11 +18,11 @@ document.getElementById("home").addEventListener('click', function () {
 })
 
 document.getElementById("submit-button").addEventListener('click', function () {
-    
+    document.querySelector(".result").style.display = "block"
+
     calcMiscCharges = (x, y, z) => {
         return miscCharges = Number(x) + Number(y) + Number(z)
     }
-
 
     calcMealCharges = (numberOfMeal) => {
         let i = 1
@@ -57,15 +58,16 @@ document.getElementById("submit-button").addEventListener('click', function () {
 
 
     const daysOnAdmission = document.getElementById('daysOnAdmission').value;
-    const medicationChrgs = document.getElementById('daysOnAdmission').value;
+    const medicationChrgs = document.getElementById('medicationCharges').value;
     const surgicalChrgs = document.getElementById('daysOnAdmission').value;
     const labFees = document.getElementById('daysOnAdmission').value;
     const mealsBought = document.getElementById('daysOnAdmission').value;
 
-    `Misc Charge: ${calcMiscCharges(medicationChrgs, surgicalChrgs, labFees)}`
+    document.getElementById("miscValue").textContent = `${calcMiscCharges(medicationChrgs, surgicalChrgs, labFees)}`
 
-    `Meal Charge: ${calcMealCharges(mealsBought)}`
-    `Admission Charges: ${calcStayCharges(daysOnAdmission)}`
+    document.getElementById("mealValue").textContent = `${calcMealCharges(mealsBought)}`
 
-    `Total Charge: ${totalChrgs(calcMiscCharges(medicationChrgs, surgicalChrgs, labFees), calcMealCharges(mealsBought), calcStayCharges(daysOnAdmission))}`
+    document.getElementById("admissionValue").textContent = `${calcStayCharges(daysOnAdmission)}`
+
+    document.getElementById("totalCharges").textContent = `${totalChrgs(calcMiscCharges(medicationChrgs, surgicalChrgs, labFees), calcMealCharges(mealsBought), calcStayCharges(daysOnAdmission))}`
 })

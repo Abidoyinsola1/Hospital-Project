@@ -30,3 +30,7 @@ input {
 ::placeholder {
     text-align: center;
 }
+
+.result {
+    padding: 2% 30% 0;
+}
