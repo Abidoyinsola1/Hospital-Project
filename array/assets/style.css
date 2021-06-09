@@ -1,36 +1,18 @@
-header {
-    background-image: url("./img/hospital-banner.png");
-    height: 94vh;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 70% 60%
+body {
+    background: black;
 }
 
-.header {
-    text-align: center;
-    padding-top: 20%;
+ul li {
+    display: inline;
+    padding-inline-end: 2%;
 }
 
-.header h1, .header p {
+a {
+    text-decoration: none;
     color: white;
-}
-
-h1 {
-    font-size: 70px;
-}
-
-p {
     font-size: 1.5em;
 }
 
-input {
-    padding: 1em 5em;
-}
-
-::placeholder {
-    text-align: center;
-}
-
-.result {
-    padding: 2% 30% 0;
+a:hover {
+    color: crimson;
 }
